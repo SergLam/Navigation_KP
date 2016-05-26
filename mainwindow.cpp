@@ -6,13 +6,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     // Statistic display elements //
     // Labels
-    l_way = new QLabel("Ñóììàðíàÿ äëèííà ìàðøðóòà ïîëåòà(êì):");
-    lmid_speed = new QLabel("Ñðåäíÿÿ ñêîðîñòü ïîëåòà(êì/÷):");
-    lmax_height = new QLabel("Ìàêñ. âûñîòà ïîëåòà(ì):");
-    lmin_height = new QLabel("Ìèí. âûñîòà ïîëåòà(ì):");
-    lmax_speed = new QLabel("Ìàêñ. ñêîðîñòü ïîëåòà(êì/÷):");
-    lmin_speed = new QLabel("Ìèí. ñêîðîñòü ïîëåòà(êì/÷):");
-    ltotal_time = new QLabel("Îáùåå âðåìÿ ïîëåòà(ìèí):");
+    l_way = new QLabel("The total length ofМакс. высота полета(м): the flight path (km):");
+    lmid_speed = new QLabel("The average flight speed (km/h):");
+    lmax_height = new QLabel("Max. altitude (m):");
+    lmin_height = new QLabel("Min. altitude (m):");
+    lmax_speed = new QLabel("Max. flight speed (km/h):");
+    lmin_speed = new QLabel("Min. flight speed (km/h):");
+    ltotal_time = new QLabel("The total flight time (min):");
     // Text Edits
     te_way = new QTextEdit;
     te_way->setMaximumHeight(25);
@@ -37,11 +37,11 @@ MainWindow::MainWindow(QWidget *parent)
     te_min_speed->setReadOnly(true);
     te_total_time->setReadOnly(true);
     // Buttons
-    pbQuit = new QPushButton("Âûõîä");
-    pbPrint = new QPushButton("Ïîêàçàòü òðàåêòîðèþ ïîëåòà");
-    pbLoad = new QPushButton("Çàãðóçèòü äàííûå");
-    pbSave = new QPushButton("Ñîõðàíèòü äàííûå äëÿ ãðàôèêîâ");
-    pbStat = new QPushButton("Ïîêàçàòü ñòàòèñòèêó ïîëåòà");
+    pbQuit = new QPushButton("Quit");
+    pbPrint = new QPushButton("Show flight path");
+    pbLoad = new QPushButton("Download data");
+    pbSave = new QPushButton("Save data for graphs");
+    pbStat = new QPushButton("Show Flight Statistics");
     glMain = new QGridLayout;
     // Layouts for buttons
     VbLayout_First = new QHBoxLayout;
