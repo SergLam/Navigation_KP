@@ -4,15 +4,15 @@
 class MainWindow : public QMainWindow{
     Q_OBJECT
 protected:
-    // Массивы для обработки входных данных //
+    // Use for temp (load input data) //
     QVector <QString> text;
     QVector <QString> text_filtrated;
-    // Массивы для хранения "сырых" значений //
+    // Filtrated data in strings //
     QVector <QString> time;
     QVector <QString> latitude;
     QVector <QString> longitude;
     QVector <QString> height;
-    // Масиивы для хранения численных значений //
+    // Vectors for calculations //
     QVector <int> hours;
     QVector <int> minutes;
     QVector <int> seconds;
@@ -23,7 +23,7 @@ protected:
     QVector <float> distance;
     QVector <float> speed;
     QVector <double> course;
-    ///// Элементы интерфейса /////
+    ///// GUI Elements /////
     QLabel *l_way, *lmid_speed, *lmax_height, *lmin_height, *lmax_speed, *lmin_speed, *ltotal_time;
     QTextEdit *te_way, *te_mid_speed, *te_max_height, *te_min_height, *te_max_speed, *te_min_speed, *te_total_time;
     QPushButton *pbQuit, *pbLoad, *pbPrint, *pbSave, *pbStat;
