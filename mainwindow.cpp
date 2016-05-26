@@ -6,13 +6,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     // Statistic display elements //
     // Labels
-    l_way = new QLabel("Ñóììàðíàÿ äëèííà ìàðøðóòà ïîëåòà(êì):");
-    lmid_speed = new QLabel("Ñðåäíÿÿ ñêîðîñòü ïîëåòà(êì/÷):");
-    lmax_height = new QLabel("Ìàêñ. âûñîòà ïîëåòà(ì):");
-    lmin_height = new QLabel("Ìèí. âûñîòà ïîëåòà(ì):");
-    lmax_speed = new QLabel("Ìàêñ. ñêîðîñòü ïîëåòà(êì/÷):");
-    lmin_speed = new QLabel("Ìèí. ñêîðîñòü ïîëåòà(êì/÷):");
-    ltotal_time = new QLabel("Îáùåå âðåìÿ ïîëåòà(ìèí):");
+    l_way = new QLabel("Ã‘Ã³Ã¬Ã¬Ã Ã°Ã­Ã Ã¿ Ã¤Ã«Ã¨Ã­Ã­Ã  Ã¬Ã Ã°Ã¸Ã°Ã³Ã²Ã  Ã¯Ã®Ã«Ã¥Ã²Ã (ÃªÃ¬):");
+    lmid_speed = new QLabel("Ã‘Ã°Ã¥Ã¤Ã­Ã¿Ã¿ Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã¯Ã®Ã«Ã¥Ã²Ã (ÃªÃ¬/Ã·):");
+    lmax_height = new QLabel("ÃŒÃ ÃªÃ±. Ã¢Ã»Ã±Ã®Ã²Ã  Ã¯Ã®Ã«Ã¥Ã²Ã (Ã¬):");
+    lmin_height = new QLabel("ÃŒÃ¨Ã­. Ã¢Ã»Ã±Ã®Ã²Ã  Ã¯Ã®Ã«Ã¥Ã²Ã (Ã¬):");
+    lmax_speed = new QLabel("ÃŒÃ ÃªÃ±. Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã¯Ã®Ã«Ã¥Ã²Ã (ÃªÃ¬/Ã·):");
+    lmin_speed = new QLabel("ÃŒÃ¨Ã­. Ã±ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã¯Ã®Ã«Ã¥Ã²Ã (ÃªÃ¬/Ã·):");
+    ltotal_time = new QLabel("ÃŽÃ¡Ã¹Ã¥Ã¥ Ã¢Ã°Ã¥Ã¬Ã¿ Ã¯Ã®Ã«Ã¥Ã²Ã (Ã¬Ã¨Ã­):");
     // Text Edits
     te_way = new QTextEdit;
     te_way->setMaximumHeight(25);
@@ -37,11 +37,11 @@ MainWindow::MainWindow(QWidget *parent)
     te_min_speed->setReadOnly(true);
     te_total_time->setReadOnly(true);
     // Buttons
-    pbQuit = new QPushButton("Âûõîä");
-    pbPrint = new QPushButton("Ïîêàçàòü òðàåêòîðèþ ïîëåòà");
-    pbLoad = new QPushButton("Çàãðóçèòü äàííûå");
-    pbSave = new QPushButton("Ñîõðàíèòü äàííûå äëÿ ãðàôèêîâ");
-    pbStat = new QPushButton("Ïîêàçàòü ñòàòèñòèêó ïîëåòà");
+    pbQuit = new QPushButton("Ã‚Ã»ÃµÃ®Ã¤");
+    pbPrint = new QPushButton("ÃÃ®ÃªÃ Ã§Ã Ã²Ã¼ Ã²Ã°Ã Ã¥ÃªÃ²Ã®Ã°Ã¨Ã¾ Ã¯Ã®Ã«Ã¥Ã²Ã ");
+    pbLoad = new QPushButton("Ã‡Ã Ã£Ã°Ã³Ã§Ã¨Ã²Ã¼ Ã¤Ã Ã­Ã­Ã»Ã¥");
+    pbSave = new QPushButton("Ã‘Ã®ÃµÃ°Ã Ã­Ã¨Ã²Ã¼ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã¤Ã«Ã¿ Ã£Ã°Ã Ã´Ã¨ÃªÃ®Ã¢");
+    pbStat = new QPushButton("ÃÃ®ÃªÃ Ã§Ã Ã²Ã¼ Ã±Ã²Ã Ã²Ã¨Ã±Ã²Ã¨ÃªÃ³ Ã¯Ã®Ã«Ã¥Ã²Ã ");
     glMain = new QGridLayout;
     // Layouts for buttons
     VbLayout_First = new QHBoxLayout;
@@ -94,7 +94,7 @@ MainWindow::MainWindow(QWidget *parent)
     glMain->addLayout(VbLayout_First,7,0);
     glMain->addLayout(VbLayout_Second,8,0);
     glMain->addLayout(VbLayout_Third,9,0);
-    wCenter ->setLayout(glMain);  // ïðèìåíèòü ñåòêó âûâîäà ê òåêóùåìó îêíó
+    wCenter ->setLayout(glMain);  
     this ->setCentralWidget(wCenter);
     connect(pbLoad, SIGNAL(clicked()), this, SLOT(LoadFile()));
     connect(pbPrint, SIGNAL(clicked()), this, SLOT(Print()));
