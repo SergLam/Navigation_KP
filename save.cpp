@@ -1,18 +1,18 @@
 #include "mainwindow.h"
 void MainWindow::Save(){
-    QString FileSaving = QFileDialog::getSaveFileName(this,"Сохранить данные для построения графиков","D:/","Файл CSV(*.csv)");
+    QString FileSaving = QFileDialog::getSaveFileName(this,"Save data for plots building","D:/","File CSV(*.csv)");
     QFile file(FileSaving);
     if (FileSaving.isEmpty()){
         file.close();
     }else{
         if(!file.open(QIODevice::WriteOnly|QIODevice::Text)){
             QMessageBox::StandardButton Save;
-            Save=QMessageBox::critical(this,"Ошибка","Ошибка сохранения",QMessageBox::Ok);
+            Save=QMessageBox::critical(this,"Error","File not opened",QMessageBox::Ok);
             return;
         }
     }
     QTextStream save(&file);
-    save<<QObject::tr("Широта(°);Долгота(°);Высота(м);Пройденный путь(км);Время полета(ч,мм,сс);Скорость(км/ч);Истинный курс(°)\n");
+    save<<QObject::tr("latitude(В°);longitude(В°);Height(m);passed way(km);Flight time(hh,mm,ss);Speed(km/h);true course(В°)\n");
     for(int i=0; i<speed.count(); i++){
         QString b = QString("%1").arg(latitude1[i], 0, 'g', 8);
         b.replace(".",",");
